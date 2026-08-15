@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -191,20 +191,23 @@
       display: block;
     }
 
+    /* CORRECCIÓN APLICADA AQUÍ */
     .carousel-item-title {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(15, 11, 20, 0.75);
+      background: rgba(15, 11, 20, 0.85);
       color: #fff;
-      font-size: 9px;
+      font-size: 8px;
       font-weight: 600;
-      padding: 4px 6px;
+      padding: 4px 4px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
+      box-sizing: border-box;
+      width: 100%;
     }
 
     @keyframes infiniteScroll {
@@ -841,7 +844,6 @@
 
     // PERSISTENCIA DE DATOS (LOCAL STORAGE)
     function saveAllData() {
-      // Recolectar datos actuales del catálogo
       const cards = document.querySelectorAll('.catalog-grid .card');
       const updatedCatalog = [];
 
@@ -956,7 +958,6 @@
         </div>
       `;
 
-      // Eventos de edición para auto-guardado
       const editables = card.querySelectorAll('[contenteditable]');
       editables.forEach(el => {
         el.addEventListener('blur', () => {
