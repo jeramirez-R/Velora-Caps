@@ -1,9 +1,8 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Velora Caps</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -191,7 +190,6 @@
       display: block;
     }
 
-    /* CORRECCIÓN APLICADA AQUÍ */
     .carousel-item-title {
       position: absolute;
       bottom: 0;
@@ -834,7 +832,6 @@
     let catalogProductsData = [];
     let carouselItemsData = [];
 
-    // MOSTRAR TOAST GUARDADO
     function showSaveToast() {
       saveToast.classList.add('visible');
       setTimeout(() => {
@@ -842,7 +839,6 @@
       }, 1500);
     }
 
-    // PERSISTENCIA DE DATOS (LOCAL STORAGE)
     function saveAllData() {
       const cards = document.querySelectorAll('.catalog-grid .card');
       const updatedCatalog = [];
@@ -878,7 +874,6 @@
       renderCatalog();
     }
 
-    /* RENDERING DE CARRUSEL */
     function renderCarousel() {
       carouselTrack.innerHTML = '';
       if(carouselItemsData.length === 0) return;
@@ -917,7 +912,6 @@
       });
     }
 
-    /* RENDERING DE CATÁLOGO */
     function renderCatalog() {
       catalogGrid.innerHTML = '';
       
@@ -972,7 +966,6 @@
       catalogGrid.appendChild(card);
     }
 
-    /* SUBIR FOTOS AL CATÁLOGO */
     function handleFileUpload(event) {
       const files = event.target.files;
       if (files.length === 0) return;
@@ -1003,7 +996,6 @@
       });
     }
 
-    /* ABRIR / EDITAR MODAL DE DETALLES */
     function openProductModalFromCard(cardElement) {
       activeCardRef = cardElement;
 
@@ -1053,7 +1045,6 @@
       activeCardRef = null;
     }
 
-    /* MODO ADMINISTRADOR */
     function handleLogoClick() {
       logoClicks++;
 
